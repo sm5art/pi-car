@@ -10,7 +10,7 @@ n_seconds = 5
 
 try:
     while True:
-        command = input().lower()
+        command = raw_input().lower()
         if command == 'w':
             start = time.time()
             while(time.time() - start < n_seconds):
