@@ -5,11 +5,11 @@ GPIO.setmode(GPIO.BCM)
 forward_pin = 26
 backward_pin = 19
 GPIO.setup(forward_pin, GPIO.OUT)
-GPIO.setup(backward_pin, GPIO.OUT)
+GPIO.setup(backward_pin, GPIO.IN)
 n_seconds = 5
 
 try:
-    GPIO.output((forward_pin, backward_pin), (GPIO.HIGH, GPIO.LOW))
+    GPIO.output(forward_pin, GPIO.HIGH)
     time.sleep(5)
 finally:
     GPIO.cleanup()
