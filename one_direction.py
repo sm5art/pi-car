@@ -26,7 +26,6 @@ try:
             while(time.time() - start < n_seconds):
                 GPIO.output(forward_pin, GPIO.LOW)
                 GPIO.output(backward_pin, GPIO.LOW)"""
-        GPIO.output(forward_pin, GPIO.HIGH)
-        GPIO.output(backward_pin, GPIO.LOW)
+        GPIO.output((forward_pin, backward_pin), (GPIO.HIGH, GPIO.LOW))
 finally:
     GPIO.cleanup()
