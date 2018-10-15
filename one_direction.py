@@ -9,7 +9,7 @@ GPIO.setup(backward_pin, GPIO.OUT)
 n_seconds = 5
 
 try:
-    while True:
+    #while True:
         """command = raw_input().lower()
         if command == 'w':
             start = time.time()
@@ -26,6 +26,7 @@ try:
             while(time.time() - start < n_seconds):
                 GPIO.output(forward_pin, GPIO.LOW)
                 GPIO.output(backward_pin, GPIO.LOW)"""
-        GPIO.output((forward_pin, backward_pin), (GPIO.HIGH, GPIO.LOW))
+    GPIO.output((forward_pin, backward_pin), (GPIO.HIGH, GPIO.LOW))
+    time.sleep(5)
 finally:
     GPIO.cleanup()
